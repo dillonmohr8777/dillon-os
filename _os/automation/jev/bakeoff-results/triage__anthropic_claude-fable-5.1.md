@@ -1,0 +1,1 @@
+{"urgency": "high", "category": "performance", "needs_human": true, "one_line_summary": "Client reports third consecutive week of unqualified leads (job seekers, not customers) and is questioning the value of the service."}

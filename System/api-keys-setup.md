@@ -123,3 +123,154 @@ Dry-run wrapper (no spend):
 ```
 
 Live smoke requires an explicit CEO spend yes plus `-Live`. Keep the key outside any agent sandbox. Requests need header `OpenAI-Beta: agents=v1` (SDK adds it; cURL must include it).
+
+## Vercel AI Gateway — TypeSafe AI Jev (added 2026-09-17)
+
+Evaluation model `typesafe-ai/jev`. Not a chat model: it takes one shared state
+plus typed questions and returns choices, scores and boolean probabilities. Used
+here for claim verification — see `_os/automation/jev/`.
+
+The Gateway needs **its own key**. A Vercel account token does not work, and
+`VERCEL_OIDC_TOKEN` only exists on Vercel deployments, not on this machine.
+Create the key at Vercel dashboard → AI Gateway → API Keys.
+
+Set as Windows User environment variable (same pattern as Gemini and OpenAI):
+
+```powershell
+[Environment]::SetEnvironmentVariable('AI_GATEWAY_API_KEY', '<paste-key-here>', 'User')
+```
+
+Restart the terminal/app after setting. Verify without printing:
+
+```powershell
+if ($env:AI_GATEWAY_API_KEY) { "AI_GATEWAY_API_KEY is set ($($env:AI_GATEWAY_API_KEY.Length) chars)" } else { "not set" }
+```
+
+AI SDK 7 reads `AI_GATEWAY_API_KEY` automatically whenever a model is given as a
+plain string. No provider import is needed for Gateway calls.
+
+Dry-run (no spend, no key required):
+
+```powershell
+node _os\automation\jev\verify-claims.mjs --input <records.json>
+```
+
+Live run requires an explicit spend yes plus `--live`. With the key unset,
+`--live` names the variable and exits 2 before any network call.
+
+### Verified 2026-09-17
+
+Read from the **unauthenticated** Gateway registry `GET
+https://ai-gateway.vercel.sh/v1/models`, not from the marketing page:
+
+| Field | Value |
+|---|---|
+| `id` | `typesafe-ai/jev` |
+| `type` | `evaluation` |
+| pricing input | `0.000000042`/token = **$0.042 per 1M** |
+| pricing output | `0` — **output tokens are not billed** |
+| `context_window` / `max_tokens` | `0` / `0` (not applicable to this modality) |
+| `zdr` / `no_training` | `all` / `all` |
+| `supported_specifications` | `v4` |
+
+The "$0.04 per 1M" figure in circulation is the rounded input price. Output is
+free, so total cost equals input tokens alone.
+
+**Still experimental.** Exported as `experimental_evaluate`; the provider spec
+comment reads "May change in patch releases." Requires AI SDK 7 or later
+(verified against `ai@7.0.105`). Evaluation is **AI SDK only** — it is not
+available through the OpenAI-, Anthropic- or Cohere-compatible endpoints.
+
+The signature is a **single options object**, not positional:
+
+```js
+import { experimental_evaluate as evaluate } from 'ai';
+const r = await evaluate({ model: 'typesafe-ai/jev', state, questions });
+```
+
+The AI SDK reference page renders a positional signature
+`evaluate(model, state, questions, options?)`. That is wrong. The installed
+typings at `node_modules/ai/dist/index.d.ts:7644` destructure one object, and
+every runnable example on both vercel.com and ai-sdk.dev uses the object form.
+
+Question types are `choice` (criteria = map of option name to description),
+`score` (criteria = ordered array, at least two levels) and `boolean` (criteria
+optional, `{true, false}`). Answers come back keyed by the original question
+IDs; there is no partial success. Several questions run in parallel in one
+request against the same state.
+
+**Rate limits, from TypeSafe's own model page:** Jev 1.13 is 250,000 tokens per
+second and 1,200 requests per minute. Over either limit returns `429`. TypeSafe
+warns these "are adjusting dynamically… can change without notice". The AI SDK
+retries with backoff by default (`maxRetries`, default 2). Also cap the key at
+Vercel → AI Gateway → Budgets.
+
+**Naming.** TypeSafe's native API calls the boolean type `noul` and returns
+`{type:"noul", noul:0.92}`. The AI SDK normalises this to `type:'boolean'` with
+a `probability` field. Same thing; the raw wire format uses the other name.
+
+**Confidence.** Choice and Score answers carry a calibrated `confidence` derived
+from the probability distribution, surfaced at
+`result.providerMetadata.typesafe.confidence`. Boolean/noul answers do not — the
+probability *is* the answer, not a confidence in it.
+
+**Pin the version if you tune thresholds.** `jev-latest` is an alias, today
+resolving to `jev-1.13.0`. It moves on release and answers can shift with it.
+`result.response.modelId` reports which version actually answered; log it.
+
+**Design rule from TypeSafe's build guide:** ask many narrow atomic questions in
+one request rather than one broad question, and compose the answers in code.
+Questions run in parallel against the same state, so decomposition costs no
+extra round trip. Route on confidence: escalate uncertain cases rather than
+guessing.
+
+### Running it from a remote / cloud session
+
+A cloud session cannot see this machine. No local filesystem, no local MCPs, and
+**no Windows user environment variables** - so the local `AI_GATEWAY_API_KEY`
+does nothing for it, and `_os/automation/jev/` only exists there if it is on
+**main**, not on a working branch.
+
+**1. The key goes in that environment's own secrets settings.** Same place the
+environment's repo list is configured, exactly as for `GEMINI_API_KEY` above.
+Add `AI_GATEWAY_API_KEY` there once; every session using that environment picks
+it up. It cannot be copied across from this machine and must never be pasted
+into a chat, a commit, or a log line.
+
+**2. Validate the pipeline before wiring any secret.** The dry run needs no key
+at all, and as of 2026-09-17 it also survives with **no outbound network**: if
+the gateway registry is unreachable it falls back to the published prices and
+says so on the price line rather than dying on a DNS error. Verified by stubbing
+`fetch` to fail:
+
+```bash
+node _os/automation/jev/verify-claims.mjs --input records/orchestrator-claims-2026-09-17.json
+node _os/automation/jev/test-verify-claims.mjs      # no network at all
+```
+
+Exit codes: `0` clean, `1` a claim was flagged, `2` the key is unset, `64` bad
+arguments. With the key unset, `--live` and `--smoke` both name the variable and
+exit `2` before any network call, printing guidance for Windows, macOS/Linux and
+remote separately. Confirmed on Windows; the code paths are platform-independent
+(`pathToFileURL` for the entrypoint guard, no shell-outs, no `%LOCALAPPDATA%`,
+no PowerShell, `.gitattributes` pins `*.mjs text eol=lf` so the shebang stays
+LF), but it has **not** been executed on Linux - there is no WSL or container on
+this machine to test in.
+
+**3. Two measured results that will mislead a remote session otherwise.**
+
+- **The dry-run token estimate is a floor, not a forecast.** It uses a char/4
+  heuristic and measured **49% low** on the real run: 8,853 estimated against
+  **13,194 actual** input tokens. Structured question objects tokenize heavier
+  than character count implies. Budget from the live figure, never the estimate.
+- **Version pinning is not achievable on the Gateway route.**
+  `result.response.modelId` comes back as `typesafe-ai/jev`, not `jev-1.13.0`.
+  The Gateway does not pass TypeSafe's version through, and `jev-latest` is an
+  alias that moves on release - so a threshold tuned today cannot be tied to the
+  version that produced it. If pinning matters, that is the argument for the
+  direct `api.typesafe.ai` route with `TYPESAFE_API_KEY`, which does report the
+  versioned id.
+
+Alternative direct-provider route, **not** used here: `@ai-sdk/typesafe-ai`
+with `TYPESAFE_AI_API_KEY` and model id `jev-latest`. That bypasses the Gateway,
+its budgets and its observability. Gateway route is the one wired.
