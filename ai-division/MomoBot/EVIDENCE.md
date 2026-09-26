@@ -88,3 +88,49 @@ design PRs that redrew the mascot: `4/design(momo): redraw the crew avatars
 as the canon Momo` and `5/design(momo): canon client success, revenue and
 growth Momos` (both merged 2026-09-23, per `gh pr list`). If "Momo v2" refers
 to something else, it needs a source before this ledger can confirm it.
+
+## Deploy m5: 2026-09-26 (MomoBot live :2026 and owner workspace :2028)
+
+Approved by Dillon on 2026-09-26 ("Make all merged work live"). Run by Claude on DESKTOP-4AHKEC4. The public VPS was not touched.
+
+- **Source:** `dillonmohr8777/deer-flow` `lane/momo-week` at `628ea631`. The only change after `0841fcec` is `docs/momo-week/*`. Built from a clean detached worktree.
+- **What ships:**
+  - #44 (MFA bypass and `next=` open redirect)
+  - #46 (Agents page crash)
+  - #38 (Team channels and AI Academy)
+  - #42 (invites)
+  - #43 (VPS kit, files only)
+  - lane work since the m4 images
+- **Images:** `deer-flow-gateway:momentum-m5-20260926` and `deer-flow-frontend:momentum-m5-20260926`, on both instances.
+  - :2026 before: `momentum-m4-20260924` (source `fbbf1a8c`).
+  - :2028 before: `dillon-workspace-20260925-momoweek`.
+- **Migrations applied:**
+  - :2026: `0037_pat_organization` to `0038_board_threads` and `0039_team_board_academy`.
+  - :2028: `0038_board_threads` to `0039_team_board_academy`.
+- **Backups:** `backup_volume.py` state PASS, SQLite `integrity_check` ok, both taken before any change.
+
+  | Backup volume | Files | DB | Volume | Head |
+  |---|---|---|---|---|
+  | `deer-flow-backup-20260926-m5pre` | 308 | 37.9 MB | 71.3 MB | 0037 |
+  | `dillon-workspace-backup-20260926-m5pre` | 504 | 535.9 MB | 541.3 MB | 0038 |
+
+- **Rehearsal (:2027, a copy of live :2026):**
+  - The copy could not act: 0 channel connections, no pending runs or batches, scheduler off.
+  - Migrations reached 0039 with no error; `/health/ready` and `/login` returned 200.
+  - Table row counts were identical before and after, including users 9, organizations 9, threads_meta 14 and project_documents 94.
+  - 5 new tables, all empty.
+  - Torn down afterwards.
+- **Config for :2026:** `momentum_internal.enabled: true`, `organization_slugs: [personal-b2588bdfd41836363db2]`. That is the only workspace named Momentum: owner plus admin, and 0 client rows.
+  - No other change. Google/OIDC is left unconfigured.
+- **Config for :2028:** `momentum_internal` stays off. The workspace `make_config.py` now strips the block it would otherwise copy from the Momentum config, and asserts it is off.
+- **Health receipts:**
+  - :2026: `health.ps1` reported `ok: true` (main 200, ready 200) at 2026-09-26T03:08 EDT.
+  - Inside the gateway, `jwt.py` contains `ACCESS_TOKEN_TYPE`, and alembic is at 0039.
+  - :2028: `/health/ready` returned 200, both locally and at tailnet `:8444`. Row counts match its backup.
+  - Tailscale serve is unchanged: 8443 to :2026, 8444 to :2028.
+- **Gate check, signed out:**
+  - `/workspace/team` and `/workspace/academy` answer 307 to `/login`, the same as `/workspace/agents`.
+  - `/api/v1/team/channels` answers 401, the same as any API route.
+  - The 404 answer only applies to a signed-in non-staff user, which was not tested because agents do not sign in.
+- **Mobile QA (390 px, Playwright, over the tailnet):** the :2026 login, agents and team pages, and the :2028 login and agents pages, render styled with no horizontal scroll. Signed-out, all of them show the login page.
+- **Rollback:** point `MOMENTUM_*_IMAGE` back to the previous tags, then restore the backup volumes above. The old images can't read head 0039.
