@@ -37,3 +37,12 @@ Google Ads reported that campaigns could not run until a billing update was comp
 
 1. [Gmail thread](https://mail.google.com/mail/u/0/#all/19fae684cc2ef236)
 2. [[Communication Intelligence Map]]
+
+## Re-read 2026-09-22, stored pull only
+
+`_os/automation/google-ads-api/pulls/Replenish_FreshBlends_campaigns_all_status.json`
+still shows the seven `Replenish | PMAX` campaigns as ENABLED / ENDED, and
+Fresh Blends #1110 and #1161 as PAUSED / SERVING, in customer 6275014654.
+The export has no end date, so this is not a new Ads API read and it does
+not clear the billing checks above. Do not restart or extend dates from
+this note. Decision card: [[Daily-Briefs/2026-09-22-carry-forward-decisions]].

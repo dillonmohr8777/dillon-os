@@ -4,8 +4,8 @@ client_id: bok-law-firm
 role: Content and digital marketing
 division: Direct
 status: active
-last_touched: 2026-08-01
-next_action: Maintain the approved weekly content workflow, resolve geographic and embargo guardrails, and establish search-to-consultation measurement.
+last_touched: 2026-09-22
+next_action: Name the packet for 2026-09-22 to 2026-09-24, or confirm the 2026-09-01 PDF is still the source. Production is stopped until then. See the 2026-09-22 fingerprint.
 due: none
 tags: [client, legal, content, social, seo]
 ---
