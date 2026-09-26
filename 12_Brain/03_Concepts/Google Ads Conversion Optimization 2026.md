@@ -3,6 +3,7 @@ tags: [concept, ads-research]
 source: "12_Brain/01_Captures/2026-07-04 - full-autonomy-directive (capture never landed; unverified)"
 updated: 2026-09-02
 expires: 2026-08-04
+status: EXPIRED
 note_type: concept
 status: expired
 verification_status: unverified
