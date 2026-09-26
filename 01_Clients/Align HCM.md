@@ -4,8 +4,8 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
-last_touched: 2026-07-29
-next_action: TBD — needs human next action
+last_touched: 2026-07-30
+next_action: Dillon — (1) reconnect Claude HubSpot OAuth for connector 16228553, (2) create Codex private app + token, (3) decide PR #11 draft vs ready; optional Customer Agent suite continue; 4-week guide-form measurement window open
 due: none
 ---
 
