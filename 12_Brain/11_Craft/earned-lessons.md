@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-26
 source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
 tags: [craft, agent-infrastructure, lessons]
 ---
@@ -550,3 +550,36 @@ only a live SERP can answer, such as who actually ranks. Also worth knowing: a
 `curl` status probe can return 403 from Cloudflare while the same URL fetched with
 `-L` and a browser user-agent returns 200 — check the status with the same request
 shape you used for the body, or you will report a site as broken when it is not.
+
+---
+
+## 2026-09-26 — A check whose empty case looks like its passing case is not a check
+
+**Lesson.** Every monitor needs three outcomes, not two: pass, fail, and *I had
+nothing to evaluate*. When the third collapses into the first, the monitor reports
+health loudest at the exact moment it has stopped working. Assert on the size of
+what you are about to check before you check it.
+
+**Evidence.** `_os/automation/bin/cadence-watchdog.js` was added 2026-09-17
+(`aaba6cc`) as the off-machine alarm for a cadence layer whose local heartbeat
+shares a power supply with what it watches. Its `cadenceJobs()` filters
+`12_Brain/registry/automations.json` on `a.enabled` — a field that registry does
+not have, all 27 records carry `status` instead — and on
+`/^(daily|weekly|monthly) via .*driver\.md/`, which matches none of the 27 cadence
+strings. So `jobs` was always `[]`, the per-job loop never ran, `problems` was
+always empty, and `ok` was always `true`: printed `no cadence jobs due today` /
+`clean`, exit 0, every 6 hours for 9 days. Meanwhile
+`_os/automation/cadence/run-ledger.jsonl` had stopped at 2026-09-15T14:00:01.764Z
+and `12_Brain/11_Craft/` had produced no brief since 2026-09-15. The one surviving
+check, `STALE_REPO_HOURS = 30` against `git log -1`, could not trip either, because
+`radar-bot` runs on GitHub Actions and pushed a commit on 17 of 17 consecutive days
+regardless of whether the Windows box was alive.
+
+**How to apply.** Make the empty case its own state and let it fail: distinguish
+"the filter matched nothing" (`jobs.length === 0`, a broken join) from "nothing is
+due right now" (`rows.length === 0`, a normal weekend), and refuse to return `ok`
+for the first. Pin it with a selftest that runs against the live registry, and run
+that selftest in the same job as the check — otherwise the filter and the data it
+filters drift apart in silence. And when you measure liveness from a shared signal
+like repo activity, scope it to sources that can only come from the thing being
+watched; a cloud bot keeps the repo warm while the machine is off.

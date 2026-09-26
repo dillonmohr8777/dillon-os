@@ -140,6 +140,19 @@ evidence.
   cookie-collision fix), and [[ai-division/MomoBot/WORKSPACE|Dillon's private
   workspace]] (21-agent roster).
 
+## Reliability — 2026-09-26
+
+- [[12_Brain/07_Reviews/2026-09-26 - The external watchdog watches nothing|The external watchdog watches nothing]]
+  — the cadence run-ledger stopped 2026-09-15T14:00Z and `12_Brain/11_Craft/` stopped
+  with it, while the 6-hourly GitHub Actions watchdog built two days later reported
+  `clean` every run. Its job filter matches 0 of 27 registry records, and `radar-bot`'s
+  daily cloud commit keeps repo-staleness from ever tripping.
+
+- [[12_Brain/11_Craft/2026-09-26 - agentic layer review|Agentic layer review, 2026-09-26]]
+  — what to change about it. One fix applied (a run that checks zero jobs can no longer
+  report ok); four proposals left for Dillon, because they decide which automations
+  page him and 26 of 27 have no ledger writer at all.
+
 ## Reliability — 2026-09-15
 
 - [[12_Brain/04_Decisions/2026-09-15 - Mac's FAQ bot is a second surface, not an opened Workmate|Mac's FAQ bot is a second surface, not an opened Workmate]]

@@ -110,10 +110,25 @@ function run() {
   }
 
   const repoStale = repoAgeHours > STALE_REPO_HOURS;
+  // A filter that matches nothing in the whole registry is a broken join, not a
+  // quiet day. This is NOT the same as rows.length === 0, which is the normal
+  // weekend case (jobs exist, none are due). Conflating the two is how this
+  // watchdog reported `clean` every 6 hours from 2026-09-17 while the cadence
+  // layer it watches had been dead since 2026-09-15.
+  const checksNothing = jobs.length === 0;
   const problems = rows.filter((r) => r.state !== 'ok');
-  const ok = !repoStale && problems.length === 0;
+  const ok = !repoStale && !checksNothing && problems.length === 0;
 
-  return { ok, checkedAt: now.toISOString(), repoAgeHours: Math.round(repoAgeHours * 10) / 10, repoStale, rows, problems };
+  return {
+    ok,
+    checkedAt: now.toISOString(),
+    repoAgeHours: Math.round(repoAgeHours * 10) / 10,
+    repoStale,
+    checksNothing,
+    jobsMatched: jobs.length,
+    rows,
+    problems,
+  };
 }
 
 function main() {
@@ -128,15 +143,28 @@ function main() {
     if (result.repoStale) {
       console.log(`  STALE REPO — nothing has reached origin in ${result.repoAgeHours}h. The ledger below cannot be trusted regardless of what it says.`);
     }
+    if (result.checksNothing) {
+      console.log(
+        '  WATCHING NOTHING — no record in 12_Brain/registry/automations.json matched the cadence filter,',
+      );
+      console.log(
+        '  so this run checked zero jobs. Fix cadenceJobs() before trusting any green result from this script.',
+      );
+    }
     if (!result.rows.length) {
-      console.log('no cadence jobs due today');
+      console.log(result.checksNothing ? 'no jobs to check' : 'no cadence jobs due today');
     } else {
       for (const r of result.rows) {
         const mark = r.state === 'ok' ? 'ok    ' : r.state.padEnd(6);
         console.log(`  ${mark}  ${r.cadence.padEnd(8)} ${r.id.padEnd(24)} last=${r.lastRun ?? 'never'}${r.note ? '  ' + r.note : ''}`);
       }
     }
-    console.log(result.ok ? '\nclean' : `\n${result.problems.length} problem(s)` + (result.repoStale ? ' + stale repo' : ''));
+    const why = [
+      result.problems.length ? `${result.problems.length} problem(s)` : null,
+      result.repoStale ? 'stale repo' : null,
+      result.checksNothing ? 'watchdog checked nothing' : null,
+    ].filter(Boolean);
+    console.log(result.ok ? '\nclean' : '\n' + why.join(' + '));
   }
 
   process.exit(result.ok ? 0 : 1);
@@ -155,6 +183,19 @@ function selftest() {
 
   // Recency math: something from right now is not stale.
   assert.ok(hoursSince(nowStr) < 0.01);
+
+  // The invariant this script lost silently: a run that matches no registry
+  // record must never report ok. Asserted against the live registry so the
+  // filter and the registry cannot drift apart again without the test saying so.
+  const live = run();
+  assert.strictEqual(
+    typeof live.checksNothing,
+    'boolean',
+    'run() must report whether the registry filter matched anything',
+  );
+  if (live.checksNothing) {
+    assert.strictEqual(live.ok, false, 'a run that checks zero jobs must not report ok');
+  }
 
   console.log('cadence-watchdog selftest OK');
 }
